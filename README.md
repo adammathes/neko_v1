@@ -10,6 +10,10 @@ It also includes a "public" view of all items for you to share what you're readi
 
 The cat ears are in your mind.
 
+## License
+
+BSD license.
+
 ## Requirements
 
 python (tested with 2.7)
