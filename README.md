@@ -23,7 +23,7 @@ See requirements.txt for required python modules.
 
 Clone the neko repo
 
-    > git clone [url]
+    > git clone git@github.com:adammathes/neko.git
 
 Install python dependencies.
 
@@ -47,7 +47,7 @@ View it in a browser at http://127.0.0.1:9899
 
 Clone the neko nepo.
 
-    > git clone [url]
+    > git clone git@github.com:adammathes/neko.git
 
 Create a new herou app.
 
