@@ -1,0 +1,182 @@
+body {
+    font-family: 'Georgia';
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5, #controls {
+    font-family: 'Helvetica Neue';
+    font-weight: 'bold';
+}
+
+#controls, .control {
+    font-variant: small-caps;
+    text-transform: lowercase;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
+a, a:hover, a:active {
+    text-decoration: none;
+    color: blue;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    margin-top: 1em;
+}
+
+p.dateline {
+    margin-top: 0;
+    font-weight: normal;
+    font-size: .75em;
+    color: #ccc;
+}
+
+.item {
+    /* border-top: solid 1px #ccc; */
+    /* border-bottom: solid 1px #ccc; */
+
+    /* border: dotted 1px #ccc; */
+    /* border-radius: 10px; */
+
+    padding: 1.5em;
+    margin: 2em 1em;
+}
+
+h3 {
+    padding: 0;
+    margin: 0;
+}
+
+#items {
+    margin-top: 1em;
+    margin-left: 10em;
+}
+
+
+#filters {
+    position: fixed;
+    top: 0em;
+    left: 1em;
+    width: 10em;
+    border: solid 1 px blue;
+    cursor: pointer;
+    color: #777;
+    height: 95%;
+    overflow-y: auto;
+}
+
+#tags, #feeds {
+    font-family: 'Helvetica Neue';
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#tags li, #feeds li {
+    font-weight: bold;
+    font-size: .75em;
+}
+
+pre {
+    display: none;
+}
+
+.read {
+}
+
+.selected {
+    border: solid 1px #999;
+}
+
+.newFilter {
+    color: black;
+}
+
+
+.all .newFilter {
+    color: #777;
+}
+
+.logo {
+    font-size: 14px; 
+    margin-top: 1em;
+    color: purple;
+}
+
+.hasunread {
+    color: blue;
+}
+
+.active, .all .everythingFilter {
+    color: black;
+}
+
+.star {
+    color: black;
+    cursor: pointer;
+}
+
+.unstar {
+    color: blue;
+    cursor: pointer;
+}
+
+#loading {
+    width: 100%;
+    font-size: 24px;
+    background-color: #ccc;
+}
+
+button {
+    font-family: 'Helvetica Neue';
+    font-size: 16px;
+    padding: 3px 10px;
+    background: white;
+    color: blue;
+    font-weight: bold;
+}
+
+
+@media only screen and (max-device-width: 768px) {
+    body {
+        width: 100%;
+        font-size: 22px;
+    }
+
+   #filters h4, #filters ul, #filters button, #filters h1 {
+        display: none;
+    } 
+
+    #controls {
+        width: 100%;
+        font-size: 36px;
+    }
+
+    #controls p {
+        margin: 0;
+        text-align: center;
+    }
+
+    #filters {
+        width: 100%;
+        height: 50px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #ccc;
+    }
+
+    #items {
+        margin: 0 auto;
+    }
+}
+

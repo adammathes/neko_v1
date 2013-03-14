@@ -1,0 +1,5 @@
+.DS_Store
+*.pyc
+venv
+auth
+build

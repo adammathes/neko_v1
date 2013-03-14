@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>neko rss mode</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <script src="/static/jquery.min.js"></script>
+    <script src="/static/jquery.tmpl.min.js"></script>
+    <script src="/static/underscore.min.js"></script>
+    <script src="/static/backbone.min.js"></script>
+    <script>
+      PUBLIC_VERSION = true;
+    </script>
+    <script src="/static/ui.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="initial-scale=1.0" />
+  </head>
+  <body>
+
+      <div id="filters">
+        <h1 class="logo">neko</h1>
+        <p style="font-size: 10px;">this is an rss aggregator</p>
+        <a href="/login/">LOGIN</a>
+
+        <h4 onclick="$('#feeds').toggle();">Feeds</h4>
+        <ul id="feeds" style="display: none;">
+        </ul>
+
+      </div>
+
+   <div id="c">
+      <div id="items">      
+      </div>      
+    </div>
+    
+    <script id="item_template" type="text/jqtmp">
+      <h3><a target="_blank" class="i" id="i_${item_id}" href="${item.url}">${item.title }</a></h3>
+        <p class="dateline" style="clear: both;">
+        ${ item.date } from <a href="${ item.feed.web_url }">${ item.feed.title }</a>
+      </p>
+      <div class="description">{{html item.description}}</div>      
+    </script>
+
+    <script id="tag_template" type="text/jqtmp">
+      ${tag.name} ${tag.unread}
+    </script>
+
+    <script id="feed_template" type="text/jqtmp">
+      <span class="txt">
+      {{if feed.title}}
+      ${feed.title}
+      {{else}}
+      ${feed.url}
+      {{/if}}
+      </span>
+
+   </script>
+
+    <script id="controls_template" type="text/jqtmp">
+      <p>
+        <a {{if app.unreadFilter}}style="font-weight: bold;"{{/if}} 
+           class="unread_filter">new</a>
+        &middot;
+        <a 
+           {{if app.allFilter}}style="font-weight: bold;"{{/if}} 
+           class="all_filter">everything</a> 
+        &middot;
+
+
+       <a {{if app.starredFilter}}style="font-weight: bold;"{{/if}}
+           class="starred_filter">starred</a>
+      </p>
+      <button class="new_feed">+ Feed</button>
+
+   </script>  
+   
+</body>
+</html>  
