@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import os
+import sys
 import datetime
 import pymongo
 import jinja2
@@ -22,6 +23,7 @@ try:
     (SECRET_USERNAME, SECRET_PASSWORD) = auth.split(':')
 except:
     print 'no valid auth file found'
+    sys.exit()
 
 app = flask.Flask(__name__)
 
@@ -46,8 +48,6 @@ from flask import request, Response
 def check_auth():
     username = request.cookies.get('username')
     password = request.cookies.get('password')
-    print username
-    print password
     return (username == SECRET_USERNAME) and (password == SECRET_PASSWORD)
 
 

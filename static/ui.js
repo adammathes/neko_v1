@@ -111,6 +111,12 @@ var AppModel =  Backbone.Model.extend({
 	    if(this.get('selectedIndex') > 0) {
 	        this.set('selectedIndex', this.get('selectedIndex')-1);
 	    }
+    },
+
+    star: function() {
+	    if(this.get('selectedIndex') > 0) {
+            App.items.at(this.get('selectedIndex')).toggleStar();
+        }
     }
 });
 var App = new AppModel();
@@ -196,16 +202,16 @@ var Item = Backbone.Model.extend({
         }
     },
 
+    toggleStar: function() {
+        this.set({'starred': !(this.get('starred'))} );
+    },
+
     star: function() {
-        console.log('starring item', this);
         this.set({'starred': true});
-   //     this.save();
     },
 
     unstar: function() {
-        console.log('unsstarring item', this);
         this.set({'starred': false});
-     //   this.save();
     }
 
 });
@@ -254,7 +260,7 @@ var ItemCollection = Backbone.Collection.extend({
 	        url = url + '&read_filter=all';
         }
 
-        console.log('fetching from ', url);
+//        console.log('fetching from ', url);
 
         var t = this;
         $.getJSON(url, function(data) {
@@ -300,7 +306,7 @@ var ItemView = Backbone.View.extend({
 	
 	initialize: function() {
 	    _.bindAll(this, 'render', 'star');
-	    // this.model.bind('change', this.render);
+	    this.model.bind('change', this.render);
 	},
 
     star: function() {
@@ -389,7 +395,6 @@ var TagView = Backbone.View.extend({
 	    return this;
 	},
     filterTo: function() {
-        console.log('clicked on', this);
         App.tag = this.model.get('name');
         App.items.reboot();
     }
@@ -453,7 +458,7 @@ var FeedView = Backbone.View.extend({
 	    return this;
 	},
     filterTo: function() {
-        console.log('filtering to feed ', this.model);
+        //        console.log('filtering to feed ', this.model);
         App.filterToFeed(this.model);
     },
     del: function() {
@@ -524,58 +529,24 @@ function boot() {
 
     // keyboard shortcuts
     $('body').keydown(function(event) {
-	if (event.which == 74) {
-	    event.preventDefault();
-        App.next();
-	}
-	if (event.which == 75) {
-	    event.preventDefault();
-        App.previous();
-	}
+	    if (event.which == 74) {
+	        event.preventDefault();
+            App.next();
+	    }
+	    if (event.which == 75) {
+	        event.preventDefault();
+            App.previous();
+	    }
+        if (event.which == 83) {
+	        event.preventDefault();
+            App.star();            
+        }
+        
     });
 
     App.boot();
 }
 
-// function install_tags() {
-
-//     $('#tags').on('click', 'li', function() {
-//         $('.tag').removeClass('active');
-// 	    $(this).addClass('active');
-// 	    filter_to_tag($(this).data('tag'));
-//     });
-    
-// }
-
-// function next_page() {
-//     page = page + 1;
-//     url = '/stream/';
-
-//     if(App.starredFilter) {
-//         url = url + 'starred/';
-//     }
-
-//     if(tag != undefined) {
-// 	    url = url + 'tag/' + tag + '/';
-//     }
-//     url = url + '?page=' + page;
-//     if(read_filter != undefined) {
-// 	    url = url + '&read_filter=' + read_filter;
-//     }
-//     console.log('fetching ' + url);
-//     $.getJSON(url, function(data) {
-// 	    $.each(data, function(i,v) {
-// 	        // var rendered_item = $.tmpl(templates.item_template, { 'item': v }).appendTo($('#items'));
-//             // $('.description a').attr('target', '_blank');
-//             var item = new Item(v);
-//             App.items.add(item);
-// 	    });
-//     });
-// }
-
-// function key_fresh() {    
-// //    window.setTimeout(key_fresh, 50);
-// }
 
 // // this is legacy code
 
