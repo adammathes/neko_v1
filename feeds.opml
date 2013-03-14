@@ -13,5 +13,10 @@
                      xmlUrl="http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"
                      htmlUrl="http://www.nytimes.com" />
 
+            <outline text="bbc"
+                     xmlUrl="http://feeds.bbci.co.uk/news/rss.xml"
+                     htmlUrl="http://news.bbc.co.uk" />
+
+
     </body>
 </opml>
