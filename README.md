@@ -10,6 +10,8 @@ It also includes a "public" view of all items for you to share what you're readi
 
 The cat ears are in your mind.
 
+Demo: http://adamsneko.herokuapp.com
+
 ## License
 
 BSD license.
