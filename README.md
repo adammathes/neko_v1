@@ -8,7 +8,7 @@ It is intended for a single user. Put in your feeds, and it will track what you 
 
 It also includes a "public" view of all items for you to share what you're reading with others.
 
-It's a little rough around the edges and touch to install right now, but I've been using it for almost a year and wanted to share.
+It's a little rough around the edges and tough to install right now, but I've been using it for almost a year and wanted to share.
 
 The cat ears are in your mind.
 
