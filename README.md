@@ -2,11 +2,13 @@
 
 ## Description
 
-Neko is a personal feed reader that displays a "river of news" style.
+Neko is a personal feed reader that displays a "river of news."
 
 It is intended for a single user. Put in your feeds, and it will track what you have read.
 
 It also includes a "public" view of all items for you to share what you're reading with others.
+
+It's a little rough around the edges and touch to install right now, but I've been using it for almost a year and wanted to share.
 
 The cat ears are in your mind.
 
