@@ -23,6 +23,8 @@ BSD license.
 python (tested with 2.7)
 See requirements.txt for required python modules.
 
+Mongodb.
+
 ## Installation
 
 Clone the neko repo
