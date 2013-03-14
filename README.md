@@ -16,7 +16,7 @@ Demo: http://adamsneko.herokuapp.com
 
 ## License
 
-BSD license.
+BSD, see LICENSE for details.
 
 ## Requirements
 
