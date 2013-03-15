@@ -88,6 +88,12 @@ Add a file called "auth" with a single line of username:password
 
 Visit /login/ to sign in and /logout/ to sign out. (I know, I know.)
 
+For Heroku, set environment vars.
+
+    > heroku config:set NEKO_USERNAME=user12345
+    > heroku config:set NEKO_PASSWORD=pass323423414
+
+
 ## Customizing
 
 Templates and css are in the static directory.
