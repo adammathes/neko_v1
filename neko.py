@@ -38,7 +38,7 @@ if '@' in mongodb_url:
 def import_opml(opml_file):
     tree = ElementTree()    
     tree.parse(opml_file)
-    outlines = tree.findall("//outline")
+    outlines = tree.findall(".//outline")
     tag = None
     # TODO: fix this for all opml formats
     for o in outlines:
