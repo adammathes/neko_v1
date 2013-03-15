@@ -1,7 +1,39 @@
-body {
-    font-family: 'Georgia';
+html {
     font-size: 18px;
-    line-height: 1.5em;
+}
+body {
+    font-size: 1.0000rem;
+    line-height: 1.500rem;
+}
+h1 {
+    font-size: 3.1875rem;
+    line-height: 3.7500rem;
+    margin-top: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+h2 {
+    font-size: 1.7500rem;
+    line-height: 2.5000rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.25rem;
+}
+h3 {
+    font-size: 1.3125rem;
+    line-height: 2.5000rem;
+    margin-top: 1.25rem;
+    margin-bottom: 0rem;
+}
+p, ul {
+    margin-top: 0rem;
+    margin-bottom: 1.25rem;
+}
+
+blockquote {
+    padding: 1rem 3rem 0 3rem;
+}
+
+body {
+    font-family: Georgia;
 }
 
 h1, h2, h3, h4, h5, #controls {
@@ -58,7 +90,8 @@ h3 {
 
 #items {
     margin-top: 1em;
-    margin-left: 10em;
+    margin-left: 7rem;
+    max-width: 35rem;
 }
 
 
@@ -108,8 +141,9 @@ pre {
 
 .logo {
     font-size: 14px; 
-    margin-top: 1em;
-    color: purple;
+    margin: 1em 0 0 0;
+    color: black;
+    line-height: 1em;
 }
 
 .hasunread {
@@ -143,6 +177,7 @@ button {
     background: white;
     color: blue;
     font-weight: bold;
+    border: solid 1px #ccc;
 }
 
 

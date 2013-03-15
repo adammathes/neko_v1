@@ -69,14 +69,12 @@
       <p>
         <a {{if app.unreadFilter}}style="font-weight: bold;"{{/if}} 
            class="unread_filter">new</a>
-        &middot;
-        <a 
+      <br />
+      <a 
            {{if app.allFilter}}style="font-weight: bold;"{{/if}} 
            class="all_filter">everything</a> 
-        &middot;
-
-
-       <a {{if app.starredFilter}}style="font-weight: bold;"{{/if}}
+      <br />
+      <a {{if app.starredFilter}}style="font-weight: bold;"{{/if}}
            class="starred_filter">starred</a>
       </p>
       <button class="new_feed">+ Feed</button>
