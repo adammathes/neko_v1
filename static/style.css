@@ -92,6 +92,7 @@ h3 {
     margin-top: 1em;
     margin-left: 7rem;
     max-width: 35rem;
+    overflow: hidden;
 }
 
 
@@ -212,7 +213,7 @@ button {
 
     #items {
         margin: 0 auto;
-        max-width: auto;
+        max-width: 100%;
     }
 }
 
