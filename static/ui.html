@@ -63,22 +63,28 @@
 
     <script id="controls_template" type="text/jqtmp">
 
-<!--
-      <input id="search" type="search" /><button class="search_go">search</button>
--->
-      <p>
-        <a {{if app.unreadFilter}}style="font-weight: bold;"{{/if}} 
-           class="unread_filter">new</a>
-      <br />
-      <a 
-           {{if app.allFilter}}style="font-weight: bold;"{{/if}} 
-           class="all_filter">everything</a> 
-      <br />
-      <a {{if app.starredFilter}}style="font-weight: bold;"{{/if}}
-           class="starred_filter">starred</a>
-      </p>
-      <button class="new_feed">+ Feed</button>
-
+      <!--
+          <input id="search" type="search" /><button class="search_go">search</button>
+          -->
+      
+      <ul>
+        <li>
+          <a {{if app.unreadFilter}}style="font-weight: bold;"{{/if}} 
+             class="unread_filter">new</a>
+        </li>
+        <li>
+          <a 
+             {{if app.allFilter}}style="font-weight: bold;"{{/if}} 
+             class="all_filter">everything</a> 
+        </li>
+        <li>
+         <a {{if app.starredFilter}}style="font-weight: bold;"{{/if}}
+            class="starred_filter">starred</a>
+        </li>
+        <li>
+          <button class="new_feed">+ Feed</button>
+        </li>
+      </ul>
    </script>  
    
 </body>

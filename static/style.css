@@ -46,6 +46,17 @@ h1, h2, h3, h4, h5, #controls {
     text-transform: lowercase;
 }
 
+
+#controls ul {
+    margin-top: 1em;
+    padding: 0;
+}
+
+#controls li {
+    list-style: none;
+    margin-left: 0;
+}
+
 h2 {
     margin: 0;
     padding: 0;
@@ -188,7 +199,7 @@ button {
         font-size: 22px;
     }
 
-   #filters h4, #filters ul, #filters button, #filters h1 {
+   #filters h4, #filters button, #filters h1 {
         display: none;
     } 
 
@@ -197,9 +208,14 @@ button {
         font-size: 36px;
     }
 
-    #controls p {
+    #controls ul {
+        padding: 0;
         margin: 0;
         text-align: center;
+    }
+
+    #controls li {
+        display: inline;
     }
 
     #filters {
@@ -210,6 +226,7 @@ button {
         left: 0;
         background: #ccc;
     }
+
 
     #items {
         margin: 0 auto;
