@@ -93,7 +93,6 @@ For Heroku, set environment vars.
     > heroku config:set NEKO_USERNAME=user12345
     > heroku config:set NEKO_PASSWORD=pass323423414
 
-
 ## Customizing
 
 Templates and css are in the static directory.

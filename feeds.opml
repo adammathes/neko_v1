@@ -9,13 +9,13 @@
                 title="trenchant.org recent content" type="rss"
                 xmlUrl="http://www.trenchant.org/rss.xml" htmlUrl="http://trenchant.org"/>
 
-            <outline text="nytimes"
-                     xmlUrl="http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"
-                     htmlUrl="http://www.nytimes.com" />
+            <outline text="Kill Screen"
+                     xmlUrl="http://killscreendaily.com/articles/latest/"
+                     htmlUrl="http://killscreendaily.com" />
 
-            <outline text="bbc"
-                     xmlUrl="http://feeds.bbci.co.uk/news/rss.xml"
-                     htmlUrl="http://news.bbc.co.uk" />
+            <outline text="XOXCO Notes"
+                     xmlUrl="http://notes.xoxco.com/rss"
+                     htmlUrl="http://notes.xoxco.com" />
 
 
     </body>
