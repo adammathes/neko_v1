@@ -17,13 +17,17 @@ from xml.etree.ElementTree import ElementTree
 SECRET_USERNAME = 'username'
 SECRET_PASSWORD = 'password'
 
+
+
 try:
     with open('auth', 'r') as f:
         auth = f.read()
     (SECRET_USERNAME, SECRET_PASSWORD) = auth.split(':')
 except:
     print 'no valid auth file found'
-    sys.exit()
+    SECRET_USERNAME = os.getenv('NEKO_USERNAME', 'username')
+    SECRET_PASSWORD = os.getenv('NEKO_PASSWORD', 'password')    
+    # sys.exit()
 
 app = flask.Flask(__name__)
 
