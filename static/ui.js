@@ -22,7 +22,7 @@ var AppModel =  Backbone.Model.extend({
     boot: function() {
         this.items.boot();
         this.tags.boot();
-        this.feeds.fetch({add: true});
+        this.feeds.fetch({set: true, remove: false})
         window.setInterval(function() { App.update_read_status() }, 5000);
         
     },
@@ -436,7 +436,8 @@ var FeedCollection = Backbone.Collection.extend({
     url: '/feed/',
 
 	initialize: function() {
-	//    _.bindAll(this, 'boot');
+	        ///    _.bindAll(this, 'boot');
+        console.log('initialized');
     },
 });
 App.feeds = new FeedCollection();
@@ -476,13 +477,16 @@ var FeedListView = Backbone.View.extend( {
 	    App.feeds.bind('change', this.render);
 	},
 	addOne: function(feed) {
+        console.log('adding a feed...', feed);
 	    var view = new FeedView({'model': feed});
         this.$el.append(view.render().el);
 	},
 	addAll: function() {
+        console.log('feed add all...');
 	    App.feeds.each(this.addOne);
 	},
     change: function() {
+        console.log('feeds changed add all...');
     },
     render: function() {
     },
