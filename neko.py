@@ -67,7 +67,8 @@ def update():
     db.items.ensure_index('url')    
     feeds = db.feeds.find({})
     pool = multiprocessing.Pool(processes=5)
-    result = pool.map(crawl_feed, feeds)
+    result = pool.map_async(crawl_feed, feeds)
+    result.wait(300)
     
 
 
