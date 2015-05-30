@@ -12,6 +12,7 @@ import uuid
 import calendar
 import requests
 from urlparse import urlsplit
+import bleach
 from xml.etree.ElementTree import ElementTree
 
 SECRET_USERNAME = 'username'
@@ -191,6 +192,7 @@ def stream(tag=None, starred=False):
     items_array = []
 
     for i in items:
+        i['description'] = bleach.clean(i['description'], tags=['blockquote', 'a', 'img', 'p', 'h1', 'h2', 'h3', 'h4', 'b', 'i', 'em' 'strong'], attributes = { 'a': ['href'], 'img': ['src', 'alt'] }, strip=True)
         items_array.append(i)
     x = json.dumps(items_array, default=handler)
     return flask.make_response(x)
