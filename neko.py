@@ -28,8 +28,8 @@ parsed = urlsplit(mongodb_url)
 db_name = parsed.path[1:]
 if not db_name:
     db_name = 'neko'
-connection = pymongo.Connection(mongodb_url)
-db = pymongo.Connection(mongodb_url)[db_name]
+client = pymongo.MongoClient(mongodb_url)
+db = client[db_name]
 if '@' in mongodb_url:
     user_pass = parsed.netloc.split('@')[0].split(':')
     db.authenticate(user_pass[0], user_pass[1])
