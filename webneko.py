@@ -220,8 +220,11 @@ def feeds():
 
     feeds_array = []
     for f in feeds:
+        if not u'title' in f.keys():
+            f[u'title'] = f[u'url']
         feeds_array.append(f)
-        
+
+    feeds_array = sorted(feeds_array, key=lambda s: s[u'title'].lower())
     x = json.dumps(feeds_array, default=handler)
 
     return flask.make_response(json.dumps(feeds_array, default=handler))
